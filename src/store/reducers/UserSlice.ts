@@ -19,25 +19,7 @@ const initialState: UserState = {
 export const userSlice = createSlice({
     name: "user",
     initialState,
-    reducers: {
-        // // Типа началась загрузка на сервер
-        // usersFetching(state) {
-        //     state.isLoading = true;
-        // },
-        //
-        // // Типа получили массив пользователей
-        // usersFetchingSuccess(state, action: PayloadAction<IUser[]>) {
-        //     state.isLoading = false;
-        //     state.error = '';
-        //     state.users = action.payload;
-        // },
-        //
-        // // Типа получили ошибку при загрузке
-        // usersFetchingError(state, action: PayloadAction<string>) {
-        //     state.isLoading = false;
-        //     state.error = action.payload;
-        // }
-    },
+    reducers: {},
     extraReducers: (builder) => {
         // fulfilled
         builder.addCase(fetchUsers.fulfilled, (state, action: PayloadAction<IUser[]>) => {
